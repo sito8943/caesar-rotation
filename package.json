@@ -14,5 +14,8 @@
     "knuth"
   ],
   "author": "Sito",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "prompt": "^1.2.1"
+  }
 }
