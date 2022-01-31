@@ -1,7 +1,7 @@
 {
   "name": "dni",
   "version": "1.0.0",
-  "description": "getting spain dni ",
+  "description": "getting spain dni",
   "main": "index.js",
   "scripts": {
     "test": "test",
@@ -13,6 +13,7 @@
     "javascript",
     "knuth"
   ],
+  "repository": "https://github.com/SitoNumbis/dni" ,
   "author": "Sito",
   "license": "ISC",
   "dependencies": {

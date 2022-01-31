@@ -43,27 +43,29 @@ const properties = [
 if (input === 0) {
   prompt.start();
 
-  prompt.get(properties, function (err, result) {
-    if (err) {
-      return onErr(err);
-    }
+  prompt.get(properties, (err, result) => {
+    if (err) return onErr(err);
+
     input = result.input;
 
     console.log("Command-line input received:");
-
-    const DNI = `${input}-${letters[input % 23]}`;
-
-    console.log(`Your DNI is: ${DNI}`);
-    process.exit(0);
+    work();
   });
-} else {
+} else work();
+
+const work = () => {
   const DNI = `${input}-${letters[input % 23]}`;
 
-  console.log("Your DNI is: ", DNI);
-  process.exit(0);
-}
+  console.log(`Your DNI is: ${DNI}`);
 
-onErr = (err) => {
+  console.log("Press any key to exit");
+
+  process.stdin.setRawMode(true);
+  process.stdin.resume();
+  process.stdin.on("data", process.exit.bind(process, 0));
+};
+
+const onErr = (err) => {
   console.log(err);
   return 1;
 };
