@@ -2,33 +2,6 @@ const prompt = require("prompt");
 
 let input = 0;
 
-// letters
-letters = [
-  "T",
-  "R",
-  "W",
-  "A",
-  "G",
-  "M",
-  "Y",
-  "F",
-  "P",
-  "D",
-  "X",
-  "B",
-  "N",
-  "J",
-  "Z",
-  "S",
-  "Q",
-  "V",
-  "H",
-  "L",
-  "C",
-  "K",
-  "E",
-];
-
 // if exist argv 2
 if (process.argv[2]) input = process.argv[2];
 
