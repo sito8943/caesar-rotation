@@ -40,21 +40,28 @@ const properties = [
   },
 ];
 
-prompt.start();
+if (input === 0) {
+  prompt.start();
 
-prompt.get(properties, function (err, result) {
-  if (err) {
-    return onErr(err);
-  }
-  input = result.input;
+  prompt.get(properties, function (err, result) {
+    if (err) {
+      return onErr(err);
+    }
+    input = result.input;
 
-  console.log("Command-line input received:");
+    console.log("Command-line input received:");
 
+    const DNI = `${input}-${letters[input % 23]}`;
+
+    console.log(`Your DNI is: ${DNI}`);
+    process.exit(0);
+  });
+} else {
   const DNI = `${input}-${letters[input % 23]}`;
 
   console.log("Your DNI is: ", DNI);
   process.exit(0);
-});
+}
 
 onErr = (err) => {
   console.log(err);
