@@ -73,3 +73,4 @@ The national identity document (DNI) in Spain consists of an 8-digit number and 
 
 The ID number is 31415927 and the remainder of dividing by 23 is 20: 31415927 = 1365909 x 23 + 20; therefore the letter that corresponds to it according to the table is "C"
 
+To run: `npm run start [-- number]`
