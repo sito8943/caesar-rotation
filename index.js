@@ -1,6 +1,40 @@
 const prompt = require("prompt");
 
-let input = 0;
+let input = "";
+
+const alphabet = [
+  "A",
+  "B",
+  "C",
+  "D",
+  "E",
+  "F",
+  "G",
+  "H",
+  "I",
+  "J",
+  "K",
+  "L",
+  "M",
+  "N",
+  "Ñ",
+  "O",
+  "P",
+  "Q",
+  "R",
+  "S",
+  "T",
+  "U",
+  "V",
+  "W",
+  "X",
+  "Y",
+  "Z",
+  "A",
+  "B",
+  "C",
+  "D",
+];
 
 // if exist argv 2
 if (process.argv[2]) input = process.argv[2];
@@ -8,12 +42,12 @@ if (process.argv[2]) input = process.argv[2];
 const properties = [
   {
     name: "input",
-    validator: /[0-9]/,
-    warning: "Number must be only numbers",
+    validator: /^[a-zA-Z\s]+$/,
+    warning: "Name must be only letters or spaces",
   },
 ];
 
-if (input === 0) {
+if (input === "") {
   prompt.start();
 
   prompt.get(properties, (err, result) => {
@@ -27,9 +61,14 @@ if (input === 0) {
 } else work();
 
 const work = () => {
-  const DNI = `${input}-${letters[input % 23]}`;
+  let rotation = "";
+  for (let i = 0; i < input.length; ++i) {
+    if (input.charAt(i) !== " ")
+      rotation += alphabet[alphabet.indexOf(input.charAt(i).toUpperCase()) + 3];
+    else rotation += input.charAt(i);
+  }
 
-  console.log(`Your DNI is: ${DNI}`);
+  console.log(`Rotation is: ${rotation}`);
 
   console.log("Press any key to exit");
 
