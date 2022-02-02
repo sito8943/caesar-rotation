@@ -1,19 +1,19 @@
 {
   "name": "dni",
   "version": "1.0.0",
-  "description": "getting spain dni",
+  "description": "caesar-rotation",
   "main": "index.js",
   "scripts": {
     "test": "test",
     "start": "node index.js"
   },
   "keywords": [
-    "dni",
-    "spain",
+    "string-manipulation",
+    "caesar-rotation",
     "javascript",
     "knuth"
   ],
-  "repository": "https://github.com/SitoNumbis/dni" ,
+  "repository": "https://github.com/SitoNumbis/caesar-rotation",
   "author": "Sito",
   "license": "ISC",
   "dependencies": {
