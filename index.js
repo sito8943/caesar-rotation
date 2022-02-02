@@ -33,7 +33,6 @@ const alphabet = [
   "A",
   "B",
   "C",
-  "D",
 ];
 
 // if exist argv 2
